@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    País de Nascimento: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verif()">
+    <div id="nacionalidade"></div>
+    <script>
+        function verif() {
+            // QUANDO FOR PEGAR DADO DO INPUT COLOCAR O .VALUE POIS PEGA O VALOR QUE FOI DIGITADO
+            let pais = document.getElementById('txtpais').value
+            let nacionalidade = document.getElementById('nacionalidade')
+            if (pais == 'Brasil') {
+                nacionalidade.innerHTML = `Você nasceu no ${pais} então você é Brasileiro!`
+            } else {
+                nacionalidade.innerHTML = `Você nasceu no ${pais} então você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
